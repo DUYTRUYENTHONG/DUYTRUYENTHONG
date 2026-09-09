@@ -1,0 +1,24 @@
+# Deployment-ready source only
+# Temporary / runtime artifacts
+*.log
+*.tmp
+tmp-*
+*.cjs
+Claude.lnk
+debug.log
+temp_check.txt
+
+# Duplicate/obsolete folders
+ck-cho-kenh-candidate/
+ck-cho-kenh-release/
+deploy-artifacts/
+growth-commerce-os-company-build-routes-20260823/
+growth-commerce-os-company-demo-system-20260823/
+growth-commerce-os-company-nav-snapshot-20260822/
+growth-commerce-os-company-nav-unify-20260823/
+growth-commerce-os-company-public-shell-20260823/
+growth-commerce-os-company-release-recovery-20260823/
+growth-commerce-os-company-ui-hardening-20260826/
+qa-artifacts/
+qa-evidence-company-ui-b21ae7f/
+S\u00e2u ri\u00eang c\u00f4 ba/
