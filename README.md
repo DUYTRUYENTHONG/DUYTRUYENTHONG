@@ -1,4 +1,4 @@
-[![Ali Nguyen — Applied AI, Data, and Product Engineering. Skills: Python, SQL, TypeScript, React, machine learning, and LLM/RAG.](assets/ali-nguyen-profile-banner.png)](https://duytruyenthong.github.io/Alinguyen-portfolio/)
+[![Ali Nguyen — Applied AI, Data, and Product Engineering. The original galaxy Earth rotates with an added row of FastAPI, Docker, GA4, LangChain, LangGraph, and CI/CD skills.](assets/ali-nguyen-galaxy-original.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/)
 
 # Hi, I'm Ali Nguyen 👋
 
@@ -8,25 +8,50 @@ I am **Nguyen Quang Duy (Ali Nguyen)**, an applied AI and product engineer and t
 
 ## Technical skills
 
-### Software and web
+[![Five applied AI skill areas illuminate in sequence: software and systems, GenAI integration, grounded data and RAG, agents and workflows, and evaluation and LLMOps.](assets/applied-ai-skill-map-v2.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/#ai-expertise)
 
-- Python, SQL, JavaScript, and TypeScript
-- React, Next.js, Node.js, API integration, and responsive interfaces
-- Git, GitHub Actions, automated checks, and release documentation
+**Core stack and current focus:** Python · FastAPI · SQL · TypeScript · Docker · Google Analytics 4 · LangChain/LangGraph · scikit-learn · CI/CD
 
-### Applied AI and data
+### Technical stack
 
-- Pandas, scikit-learn, PostgreSQL, snapshot-date features, and holdout evaluation
-- LLM API and prompt workflows; retrieval-grounded assistant prototypes
-- Power BI and DAX for analytics and reporting
+| Area | Tools and technologies |
+| --- | --- |
+| Languages & frameworks | Python, Bash, FastAPI, OpenCV, PyTorch, Rust |
+| AI/ML tools | ONNX, TorchScript, Faiss, Milvus, scikit-learn |
+| Data & pipelines | Apache Kafka, PostgreSQL, Redis, Airflow |
+| DevOps & infrastructure | Docker, Kubernetes, GitHub Actions, NGINX, Prometheus, Grafana |
+| Cloud & edge | AWS, GCP, NVIDIA Jetson, Raspberry Pi |
 
-### Product and commerce
+This owner-supplied stack includes hands-on tools and areas of active study. The linked source and writing below distinguish implemented work from design studies; listing a technology does not imply that every named service is deployed in production.
 
-- Customer discovery, sales funnels, content and lead workflows
-- Google Business Profile and TikTok Shop operations
-- Turning customer problems into testable product requirements
+### 01 · Software and systems
 
-These skills span public code, live websites, and owner-described work. The [recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) identifies the evidence available for each area.
+- **Public code:** Python, Pandas, JavaScript/TypeScript, React, Next.js, Node.js, Git, GitHub Actions, and automated tests.
+- **Backend and operations toolkit:** SQL/PostgreSQL, FastAPI, Flask, REST/GraphQL API design, async programming, JSON, Linux CLI, Docker, and CI/CD pipelines. I am developing depth in Java/C++, Kubernetes, AWS, GCP, and Azure.
+
+### 02 · GenAI integration
+
+- **Public design study:** Prompt and retrieval design documented in my [grounded assistant note](writing/grounded-marketing-assistant.md); it is not a deployed LLM service.
+- **Current focus:** OpenAI, Anthropic, and Gemini APIs; Hugging Face, Together AI, Baseten, and Ollama for open or hosted models; system prompts, JSON-schema structured outputs, context-window management, token optimization, and cost-aware model routing.
+
+### 03 · Data grounding and RAG
+
+- **Public evidence:** Pandas feature construction in the [KKBox baseline](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction) and a [retrieval design note](writing/grounded-marketing-assistant.md) covering citations and permission boundaries.
+- **Current focus:** Document parsing, semantic chunking, hybrid dense/sparse search, reranking, LangChain, LlamaIndex, and Haystack. I compare pgvector, Qdrant, Pinecone, Milvus, and Weaviate as vector-store options rather than claiming production use of each.
+
+### 04 · Agents and workflows
+
+- **Public evidence:** Reproducible AI-assisted delivery and CI checks in public repositories; no deployed autonomous agent is claimed.
+- **Current focus:** LangGraph orchestration, tool/function calling, bounded planning, short- and long-term memory, approval gates, and guardrails. I evaluate CrewAI, AutoGen, and custom execution loops against task requirements.
+
+### 05 · Evaluation and LLMOps
+
+- **Project-backed:** scikit-learn holdout protocol, snapshot-date leakage tests, and explicit [KKBox results status](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction/blob/main/docs/RESULTS.md).
+- **Current focus:** Deterministic assertions, LLM-as-a-judge, Ragas, DeepEval, and regression sets; LangSmith, Arize Phoenix, OpenTelemetry, and custom latency, token, and error tracing.
+
+**Marketing technology:** Google Analytics 4 attribution and event-scope analysis, Power BI/DAX reporting, Google Business Profile, TikTok Shop operations, customer discovery, and commerce funnel design. My [funnel measurement note](writing/commerce-funnel-measurement.md) distinguishes first-user, session, and event attribution scopes.
+
+The [recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) maps capabilities to source, live pages, and evidence limits.
 
 ## Engineering and research interests
 
