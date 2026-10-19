@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import os
+import re
+from hashlib import sha256
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -12,6 +14,7 @@ from xml.sax.saxutils import escape
 
 LOGIN = "DUYTRUYENTHONG"
 OUTPUT = Path(__file__).resolve().parents[1] / "assets" / "github-stats.svg"
+README = OUTPUT.parents[1] / "README.md"
 QUERY = """
 query ProfileStats($login: String!) {
   user(login: $login) {
@@ -112,7 +115,19 @@ def main() -> None:
         raise SystemExit("GITHUB_TOKEN is required")
     stats = fetch_stats(token)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(render_svg(stats, datetime.now(timezone.utc)), encoding="utf-8")
+    svg = render_svg(stats, datetime.now(timezone.utc))
+    OUTPUT.write_text(svg, encoding="utf-8")
+    version = sha256(svg.encode()).hexdigest()[:12]
+    readme = README.read_text(encoding="utf-8")
+    updated_readme, replacements = re.subn(
+        r"assets/github-stats\.svg(?:\?v=[0-9a-f]{12})?",
+        f"assets/github-stats.svg?v={version}",
+        readme,
+    )
+    if replacements != 1:
+        raise RuntimeError("Expected exactly one GitHub stats image in README.md")
+    if updated_readme != readme:
+        README.write_text(updated_readme, encoding="utf-8")
     print(f"Rendered {OUTPUT.relative_to(OUTPUT.parents[1])}: {stats}")
 
 

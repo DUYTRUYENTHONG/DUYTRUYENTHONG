@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-stats-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-24.04
@@ -22,10 +26,10 @@ jobs:
         run: python scripts/render_stats.py
       - name: Commit refreshed card
         run: |
-          if ! git diff --quiet -- assets/github-stats.svg; then
+          if ! git diff --quiet -- assets/github-stats.svg README.md; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets/github-stats.svg
+            git add assets/github-stats.svg README.md
             git commit -m "chore: refresh GitHub profile stats"
             git push
           fi
