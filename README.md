@@ -27,7 +27,7 @@ These are skills used across projects and prior work; the linked evidence indica
 ## For recruiters and graduate admissions
 
 - **Recruiters:** The [recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) maps capabilities to source, live pages, and evidence limits. [Download the Applied AI CV](https://duytruyenthong.github.io/Alinguyen-portfolio/cv-applied-ai-engineer.pdf).
-- **Master's admissions:** I hold a **Bachelor of Computer Science from Vietnamese-German University** (2021–2026), as confirmed by me. I am interested in reliable applied AI, retrieval-grounded answers, temporal evaluation of customer models, and human-facing systems. The [admissions brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/ACADEMIC_BRIEF.md) outlines research questions and preparation. Official degree documents and transcripts are available on request.
+- **Master's admissions:** I hold a **Bachelor of Computer Science from Vietnamese-German University** (2021–2026). I am interested in reliable applied AI, retrieval-grounded answers, temporal evaluation of customer models, and human-facing systems. The [admissions brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/ACADEMIC_BRIEF.md) outlines research questions and preparation. Admissions reviewers can request official degree documents and transcripts directly from me.
 
 I do not present local prototypes as deployed AI services or claim unverified model scores, research publications, adoption, or revenue outcomes.
 
