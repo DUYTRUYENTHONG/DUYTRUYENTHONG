@@ -4,7 +4,7 @@
 
 **Question:** If a subscription team must decide whom to contact on 1 June, how can its model use only information available on 1 June?
 
-The [KKBox baseline in my portfolio](https://duytruyenthong.github.io/Alinguyen-portfolio/#project-kkbox-baseline) explores this boundary with a local prototype and a synthetic future-event exclusion check. Its real-data scores are pending. The design below explains the evaluation I would require before using a churn score in a marketing workflow.
+The [KKBox baseline in my portfolio](https://duytruyenthong.github.io/Alinguyen-portfolio/#project-kkbox-baseline) explores this boundary with a synthetic future-event exclusion check and a local run on official competition files. The [documented holdout](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction/blob/main/docs/RESULTS.md) reached 0.217324 log loss and 0.819295 ROC AUC. It is a within-cohort result, not an out-of-time test or an operational retention outcome. The design below explains what I would require before using a churn score in a marketing workflow.
 
 ## Define the decision before the dataset
 
@@ -43,4 +43,4 @@ For an outreach team with limited capacity, compare precision and recall at a st
 
 A prediction does not establish that an outreach action will prevent churn. To claim incremental retention, the team would need a separately designed intervention evaluation, such as a randomized holdout, with consent and operational safeguards.
 
-**Evidence boundary:** My portfolio currently shows a synthetic leakage check and a local baseline design. I am not publishing a real KKBox performance figure, customer list, or retention lift.
+**Evidence boundary:** I publish aggregate local holdout metrics, input hashes, source counts, and limitations for the official KKBox data. I do not publish customer rows or predictions, claim a Kaggle leaderboard score, or infer retention lift from prediction quality.
