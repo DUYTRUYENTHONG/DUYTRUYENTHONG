@@ -6,13 +6,34 @@ I am **Nguyen Quang Duy (Ali Nguyen)**, an applied AI and product engineer and t
 
 [Portfolio and case studies](https://duytruyenthong.github.io/Alinguyen-portfolio/) · [Recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) · [Master's admissions brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/ACADEMIC_BRIEF.md) · [Applied AI CV](https://duytruyenthong.github.io/Alinguyen-portfolio/cv-applied-ai-engineer.pdf)
 
-## What I work on
+## Technical skills
 
-- **Applied AI and data:** Python, SQL, Pandas, scikit-learn, snapshot-date feature design, holdout evaluation, LLM APIs, prompt workflows, and retrieval-grounded assistant prototypes.
-- **Product engineering:** TypeScript, JavaScript, React, Next.js, Node.js, API integration, testing, GitHub Actions, and documentation that makes decisions reviewable.
-- **Commerce and analytics:** customer discovery, sales funnels, lead workflows, PostgreSQL, Power BI, DAX, Google Business Profile, and TikTok Shop.
+### Software and web
 
-These are skills used across projects and prior work; the linked evidence indicates which implementations are public and which remain local prototypes.
+- Python, SQL, JavaScript, and TypeScript
+- React, Next.js, Node.js, API integration, and responsive interfaces
+- Git, GitHub Actions, automated checks, and release documentation
+
+### Applied AI and data
+
+- Pandas, scikit-learn, PostgreSQL, snapshot-date features, and holdout evaluation
+- LLM API and prompt workflows; retrieval-grounded assistant prototypes
+- Power BI and DAX for analytics and reporting
+
+### Product and commerce
+
+- Customer discovery, sales funnels, content and lead workflows
+- Google Business Profile and TikTok Shop operations
+- Turning customer problems into testable product requirements
+
+These skills span public code, live websites, and owner-described work. The [recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) identifies the evidence available for each area.
+
+## Engineering and research interests
+
+- Reliable AI answers grounded in retrievable sources
+- Time-aware evaluation of customer models without future-data leakage
+- Interfaces that help people interpret uncertain AI outputs
+- Reproducible, reviewable AI-assisted software delivery
 
 ## Selected work
 
@@ -23,6 +44,12 @@ These are skills used across projects and prior work; the linked evidence indica
 | [Growth Commerce OS](https://growth-commerce-os.vercel.app/en) | Service pages and customer-facing commerce workflows | Live website; impact not measured here |
 | [STOS](https://stosvn.vercel.app/stos) and [Chợ Kênh](https://growth-commerce-os.vercel.app/cho-kenh) | Sales-page product and marketplace catalog with manual inquiries | Live websites; private implementation |
 | [KKBox churn baseline](https://duytruyenthong.github.io/Alinguyen-portfolio/#project-kkbox-baseline) | Snapshot-date case study and synthetic leakage check | Local prototype; public code and real-data scores pending |
+
+## GitHub stats
+
+[![GitHub activity for DUYTRUYENTHONG: contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats.svg)](https://github.com/DUYTRUYENTHONG)
+
+The card uses GitHub's contribution calendar and repository data. It shows counts and its last refresh date; it is not a code-quality or impact score. [View the contribution activity on GitHub](https://github.com/DUYTRUYENTHONG?tab=overview).
 
 ## For recruiters and graduate admissions
 
