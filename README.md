@@ -53,7 +53,7 @@ I write about the decisions behind customer-facing AI and measurement systems. T
 | [Vibecode Product Kit](https://github.com/DUYTRUYENTHONG/vibecode-product-kit) | JavaScript/Node.js CLI, templates, tests, and CI | Public developer tool |
 | [Growth Commerce OS](https://growth-commerce-os.vercel.app/en) | Service pages and customer-facing commerce workflows | Live website; impact not measured here |
 | [STOS](https://stosvn.vercel.app/stos) and [Chợ Kênh](https://growth-commerce-os.vercel.app/cho-kenh) | Sales-page product and marketplace catalog with manual inquiries | Live websites; private implementation |
-| [KKBox churn baseline](https://duytruyenthong.github.io/Alinguyen-portfolio/#project-kkbox-baseline) | Snapshot-date case study and synthetic leakage check | Local prototype; public code and real-data scores pending |
+| [KKBox churn baseline](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction) | Public Python source, snapshot-date case study, synthetic leakage test, and evaluation protocol | Public baseline; real-data scores pending authorized access |
 
 ## GitHub stats
 
