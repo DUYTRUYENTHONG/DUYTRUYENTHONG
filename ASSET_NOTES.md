@@ -6,11 +6,12 @@ Generation brief: a wide midnight-blue technology banner with a luminous data gl
 
 ## Animated profile assets
 
-`scripts/render_motion.py` generates `assets/ali-nguyen-galaxy-original.gif` from the
+`scripts/render_motion.py` generates `assets/ali-nguyen-galaxy-stack.gif` from the
 original `assets/ali-nguyen-profile-banner.png`: it preserves the original
 Earth, galaxy, text, and orbit artwork while moving luminous surface details
-and orbit lights in a seamless loop. A second skill-chip row adds FastAPI,
-Docker, GA4, LangChain, LangGraph, and CI/CD to the hero. It also generates
+and orbit lights in a seamless loop. Five rows beneath the original artwork
+show all 25 owner-supplied technologies at once. Each row receives a sequential
+glow, underline, and moving light to call attention to the stack. It also generates
 `assets/applied-ai-skill-map-v2.gif` with five skill cards illuminating in
 sequence. Both animations use no external runtime service. Generate them with
 Python, Pillow, and NumPy:

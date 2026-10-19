@@ -1,4 +1,4 @@
-[![Ali Nguyen — Applied AI, Data, and Product Engineering. The original galaxy Earth rotates with an added row of FastAPI, Docker, GA4, LangChain, LangGraph, and CI/CD skills.](assets/ali-nguyen-galaxy-original.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/)
+[![Ali Nguyen — Applied AI, Data, and Product Engineering. The original galaxy Earth moves above five highlighted technical stack rows covering languages, AI and ML, data pipelines, infrastructure, and cloud and edge devices.](assets/ali-nguyen-galaxy-stack.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/)
 
 # Hi, I'm Ali Nguyen 👋
 

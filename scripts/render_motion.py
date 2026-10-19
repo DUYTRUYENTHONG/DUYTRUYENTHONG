@@ -18,6 +18,13 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 FONT_DIR = Path("C:/Windows/Fonts")
 CYAN = (60, 209, 255)
+STACK_ROWS = (
+    ("LANGUAGES / FRAMEWORKS", "Python  ·  Bash  ·  FastAPI  ·  OpenCV  ·  PyTorch  ·  Rust"),
+    ("AI / ML TOOLING", "ONNX  ·  TorchScript  ·  Faiss  ·  Milvus  ·  scikit-learn"),
+    ("DATA / PIPELINES", "Apache Kafka  ·  PostgreSQL  ·  Redis  ·  Airflow"),
+    ("DEVOPS / INFRA", "Docker  ·  Kubernetes  ·  GitHub Actions  ·  NGINX  ·  Prometheus  ·  Grafana"),
+    ("CLOUD / EDGE", "AWS  ·  GCP  ·  NVIDIA Jetson  ·  Raspberry Pi"),
+)
 
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -44,6 +51,9 @@ def save_loop(frames: list[Image.Image], path: Path, duration: int) -> None:
 def banner() -> None:
     source = Image.open(ASSETS / "ali-nguyen-profile-banner.png").convert("RGB")
     base = source.resize((960, 322), Image.Resampling.LANCZOS)
+    lower = base.crop((0, 228, 960, 322)).resize((960, 338), Image.Resampling.BICUBIC)
+    lower = lower.filter(ImageFilter.GaussianBlur(35))
+    lower = Image.blend(lower, Image.new("RGB", lower.size, "#071526"), 0.82)
     original = np.asarray(base, dtype=np.float32)
     shading = np.asarray(base.filter(ImageFilter.GaussianBlur(27)), dtype=np.float32)
     surface = original - shading
@@ -63,7 +73,7 @@ def banner() -> None:
             positions = np.arange(x0, x1)
             distance = np.sqrt((positions - cx) ** 2 + dy * dy)
             # Retain the exact original rim and orbit rings at the edge.
-            blend = np.clip((radius - distance - 7) / 17, 0, 1) * 0.50
+            blend = np.clip((radius - distance - 7) / 17, 0, 1) * 0.26
             row = surface[y, x0:x1]
             # Mirror the hidden hemisphere to make a seamless texture loop from
             # the one supplied globe view; the original artwork stays intact.
@@ -88,30 +98,32 @@ def banner() -> None:
         image.alpha_composite(orbit.filter(ImageFilter.GaussianBlur(5)))
         image.alpha_composite(orbit)
 
-        # Extend the original hero's skill row while preserving its typography.
-        chips = ("FastAPI", "Docker", "GA4", "LangChain", "LangGraph", "CI/CD")
-        chip_layer = Image.new("RGBA", image.size, (0, 0, 0, 0))
-        chip_draw = ImageDraw.Draw(chip_layer, "RGBA")
-        label_font = font(14, True)
-        chip_x = 61
-        for chip_index, label in enumerate(chips):
-            chip_width = math.ceil(chip_draw.textlength(label, font=label_font)) + 24
-            active = max(0.0, 1 - abs(((index / 7) - chip_index + 3) % 6 - 3))
-            outline = (54, int(160 + 60 * active), 245, int(155 + 75 * active))
-            chip_draw.rounded_rectangle(
-                (chip_x, 245, chip_x + chip_width, 276),
-                radius=10,
-                fill=(4, 27, 51, 217),
-                outline=outline,
-                width=2 if active > 0.4 else 1,
-            )
-            chip_draw.text((chip_x + 12, 252), label, font=label_font, fill=(235, 249, 255, 255))
-            chip_x += chip_width + 8
-        image.alpha_composite(chip_layer)
-        frames.append(image.convert("RGB"))
+        # The original artwork remains above a dedicated, fully readable stack.
+        canvas = Image.new("RGBA", (960, 660))
+        canvas.paste(image, (0, 0))
+        canvas.paste(lower, (0, 322))
+        panel = ImageDraw.Draw(canvas, "RGBA")
+        panel.rectangle((0, 322, 960, 325), fill=(46, 177, 228, 155))
+        panel.text((48, 345), "TECHNICAL STACK", font=font(22, True), fill="#e7f8ff")
+        panel.text((693, 350), "25 TOOLS  /  5 AREAS", font=font(14, True), fill="#91c7e1")
 
-    save_loop(frames, ASSETS / "ali-nguyen-galaxy-original.gif", 90)
-    frames[0].save(ASSETS / "ali-nguyen-galaxy-original-still.png", optimize=True)
+        for row_index, (label, technologies) in enumerate(STACK_ROWS):
+            y = 390 + row_index * 52
+            active = max(0.0, 1 - abs(((index / 8) - row_index + 2.5) % 5 - 2.5))
+            fill = (int(5 + 7 * active), int(25 + 23 * active), int(44 + 29 * active), 242)
+            edge = (int(39 + 45 * active), int(105 + 97 * active), int(151 + 81 * active), 230)
+            panel.rounded_rectangle((48, y, 912, y + 45), radius=11, fill=fill, outline=edge, width=2)
+            panel.text((64, y + 12), label, font=font(15, True), fill=(122, int(188 + 45 * active), 227))
+            panel.text((300, y + 9), technologies, font=font(18), fill=(int(205 + 42 * active), int(226 + 23 * active), 255))
+            if active > 0.08:
+                length = int(858 * active)
+                panel.rounded_rectangle((51, y + 42, 51 + length, y + 44), radius=1, fill=(97, 223, 255, 230))
+                sweep_x = 51 + int(858 * (index % 8) / 8)
+                panel.ellipse((sweep_x - 3, y + 39, sweep_x + 3, y + 45), fill=(206, 249, 255, 230))
+        frames.append(canvas.convert("RGB"))
+
+    save_loop(frames, ASSETS / "ali-nguyen-galaxy-stack.gif", 90)
+    frames[0].save(ASSETS / "ali-nguyen-galaxy-stack-still.png", optimize=True)
 
 
 def skills() -> None:
