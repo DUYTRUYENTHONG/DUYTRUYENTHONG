@@ -13,8 +13,9 @@ from xml.sax.saxutils import escape
 
 
 LOGIN = "DUYTRUYENTHONG"
-OUTPUT = Path(__file__).resolve().parents[1] / "assets" / "github-stats.svg"
-README = OUTPUT.parents[1] / "README.md"
+ROOT = Path(__file__).resolve().parents[1]
+ASSETS = ROOT / "assets"
+README = ROOT / "README.md"
 QUERY = """
 query ProfileStats($login: String!) {
   user(login: $login) {
@@ -114,21 +115,25 @@ def main() -> None:
     if not token:
         raise SystemExit("GITHUB_TOKEN is required")
     stats = fetch_stats(token)
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    svg = render_svg(stats, datetime.now(timezone.utc))
-    OUTPUT.write_text(svg, encoding="utf-8")
+    svg = render_svg(stats, datetime.now(timezone.utc)).replace("\r\n", "\n")
     version = sha256(svg.encode()).hexdigest()[:12]
+    output = ASSETS / f"github-stats-{version}.svg"
     readme = README.read_text(encoding="utf-8")
     updated_readme, replacements = re.subn(
-        r"assets/github-stats\.svg(?:\?v=[0-9a-f]{12})?",
-        f"assets/github-stats.svg?v={version}",
+        r"assets/github-stats(?:-[0-9a-f]{12})?\.svg(?:\?v=[0-9a-f]{12})?",
+        f"assets/{output.name}",
         readme,
     )
     if replacements != 1:
         raise RuntimeError("Expected exactly one GitHub stats image in README.md")
+    ASSETS.mkdir(parents=True, exist_ok=True)
+    output.write_text(svg, encoding="utf-8", newline="\n")
     if updated_readme != readme:
-        README.write_text(updated_readme, encoding="utf-8")
-    print(f"Rendered {OUTPUT.relative_to(OUTPUT.parents[1])}: {stats}")
+        README.write_text(updated_readme, encoding="utf-8", newline="\n")
+    for old in ASSETS.glob("github-stats*.svg"):
+        if old != output:
+            old.unlink()
+    print(f"Rendered {output.relative_to(ROOT)}: {stats}")
 
 
 if __name__ == "__main__":

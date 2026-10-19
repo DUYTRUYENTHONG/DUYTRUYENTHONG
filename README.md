@@ -47,7 +47,7 @@ These skills span public code, live websites, and owner-described work. The [rec
 
 ## GitHub stats
 
-[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats.svg?v=d188aa4258fa)](https://github.com/DUYTRUYENTHONG)
+[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats-5e60bc1cd178.svg)](https://github.com/DUYTRUYENTHONG)
 
 The card uses GitHub's contribution calendar and repository data. It counts public contributions; the owner's signed-in graph may also include private activity. It shows its last refresh date and is not a code-quality or impact score. [View the contribution activity on GitHub](https://github.com/DUYTRUYENTHONG?tab=overview).
 
