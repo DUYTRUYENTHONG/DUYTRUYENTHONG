@@ -20,6 +20,7 @@ query ProfileStats($login: String!) {
     contributionsCollection {
       startedAt
       endedAt
+      restrictedContributionsCount
       contributionCalendar { totalContributions }
     }
   }
@@ -48,8 +49,10 @@ def fetch_stats(token: str) -> dict[str, int]:
     if not user:
         raise RuntimeError(f"GitHub user {LOGIN} was not returned")
 
+    collection = user["contributionsCollection"]
     stats = {
-        "contributions": user["contributionsCollection"]["contributionCalendar"]["totalContributions"],
+        "contributions": collection["contributionCalendar"]["totalContributions"]
+        - collection["restrictedContributionsCount"],
         "public_repos": user["repositories"]["totalCount"],
         "pinned_projects": user["pinnedItems"]["totalCount"],
     }
@@ -62,7 +65,7 @@ def render_svg(stats: dict[str, int], updated: datetime) -> str:
     date_label = updated.astimezone(timezone.utc).strftime("%d %b %Y UTC")
     title = escape(f"GitHub activity for {LOGIN}")
     description = escape(
-        f"{stats['contributions']} contributions in the rolling year; "
+        f"{stats['contributions']} public contributions in the rolling year; "
         f"{stats['public_repos']} public repositories; "
         f"{stats['pinned_projects']} pinned projects. Updated {date_label}."
     )
@@ -92,7 +95,7 @@ def render_svg(stats: dict[str, int], updated: datetime) -> str:
     <text x="70" y="54" fill="#e9f4ff" font-size="24" font-weight="700">GITHUB ACTIVITY</text>
     <text x="1030" y="53" fill="#9fb9cb" font-size="17" text-anchor="end">@{LOGIN}</text>
     <text x="70" y="173" fill="#ffffff" font-size="68" font-weight="700">{contributions}</text>
-    <text x="70" y="210" fill="#aed1e3" font-size="19">CONTRIBUTIONS · PAST YEAR</text>
+    <text x="70" y="210" fill="#aed1e3" font-size="19">PUBLIC CONTRIBUTIONS · 1Y</text>
     <text x="430" y="173" fill="#ffffff" font-size="68" font-weight="700">{public_repos}</text>
     <text x="430" y="210" fill="#aed1e3" font-size="19">PUBLIC REPOSITORIES</text>
     <text x="772" y="173" fill="#ffffff" font-size="68" font-weight="700">{pinned_projects}</text>
