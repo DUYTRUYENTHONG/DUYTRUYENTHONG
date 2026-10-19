@@ -35,6 +35,16 @@ These skills span public code, live websites, and owner-described work. The [rec
 - Interfaces that help people interpret uncertain AI outputs
 - Reproducible, reviewable AI-assisted software delivery
 
+## Technical writing: AI and data in marketing technology
+
+I write about the decisions behind customer-facing AI and measurement systems. These notes show how I frame data boundaries, evaluation, and product tradeoffs; they do not claim production deployments or measured business gains.
+
+| Note | Engineering question | Related work |
+| --- | --- | --- |
+| [Predict churn from what was known then](writing/snapshot-safe-churn.md) | How do we define a customer snapshot and test for future-data leakage? | [KKBox baseline](https://duytruyenthong.github.io/Alinguyen-portfolio/#project-kkbox-baseline) |
+| [A source-grounded marketing knowledge assistant](writing/grounded-marketing-assistant.md) | How do retrieval, permissions, citations, and evaluation fit together? | [Applied AI expertise](https://duytruyenthong.github.io/Alinguyen-portfolio/#ai-expertise) |
+| [Measure a commerce funnel without mixing attribution scopes](writing/commerce-funnel-measurement.md) | What can event data tell us about a funnel, and what can it not prove? | [Growth Commerce OS](https://growth-commerce-os.vercel.app/en) |
+
 ## Selected work
 
 | Project | What you can inspect | Status |
