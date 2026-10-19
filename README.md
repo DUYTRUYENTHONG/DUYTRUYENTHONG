@@ -1,10 +1,19 @@
 [![Ali Nguyen — Applied AI, Data, and Product Engineering. The original galaxy Earth moves above five highlighted technical stack rows covering languages, AI and ML, data pipelines, infrastructure, and cloud and edge devices.](assets/ali-nguyen-galaxy-stack.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/)
 
-# Hi, I'm Ali Nguyen 👋
+# Ali Nguyen · Applied AI engineer 👋
 
-I am **Nguyen Quang Duy (Ali Nguyen)**, an applied AI and product engineer and the founder of **DUYTRUYENTHONG**. I build testable AI prototypes, developer tools, and digital commerce products. My background connects customer discovery with software delivery and data evaluation.
+I am **Nguyen Quang Duy (Ali Nguyen)**, a Computer Science graduate of Vietnamese-German University and founder of **DUYTRUYENTHONG**. I build testable Python ML baselines, developer tools for AI-assisted delivery, and data-informed commerce products. My work connects data boundaries and tests with software that people can use.
 
-[Portfolio and case studies](https://duytruyenthong.github.io/Alinguyen-portfolio/) · [Recruiter brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) · [Master's admissions brief](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/ACADEMIC_BRIEF.md) · [Applied AI CV](https://duytruyenthong.github.io/Alinguyen-portfolio/cv-applied-ai-engineer.pdf)
+[Applied AI CV](https://duytruyenthong.github.io/Alinguyen-portfolio/cv-applied-ai-engineer.pdf) · [Portfolio and case studies](https://duytruyenthong.github.io/Alinguyen-portfolio/) · [Recruiter evidence map](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio/blob/main/docs/RECRUITER_BRIEF.md) · [Email me](mailto:nquangd1510@gmail.com)
+
+## Work you can inspect
+
+| Project | Engineering evidence | Status |
+| --- | --- | --- |
+| [KKBox churn baseline](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction) | Python, Pandas, scikit-learn; snapshot-cutoff feature construction, a synthetic future-data leakage test, and a reproducible holdout evaluation protocol | Public source and tests; [official-data results pending](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction/blob/main/docs/RESULTS.md) |
+| [Vibecode Product Kit](https://github.com/DUYTRUYENTHONG/vibecode-product-kit) | Offline Node.js CLI, validation, tests, and GitHub Actions for traceable AI-assisted product delivery | Public developer tool; no measured adoption claim |
+| [Ali Nguyen portfolio](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio) | Next.js/TypeScript source, project records, CVs, and GitHub Pages workflow | Public source and [live site](https://duytruyenthong.github.io/Alinguyen-portfolio/) |
+| [Growth Commerce OS](https://growth-commerce-os.vercel.app/en), [STOS](https://stosvn.vercel.app/stos), and [Chợ Kênh](https://growth-commerce-os.vercel.app/cho-kenh) | Customer-facing service, sales-page, and marketplace workflows | Live websites; implementation is private and business impact is unmeasured |
 
 ## Technical skills
 
@@ -70,19 +79,9 @@ I write about the decisions behind customer-facing AI and measurement systems. T
 | [A source-grounded marketing knowledge assistant](writing/grounded-marketing-assistant.md) | How do retrieval, permissions, citations, and evaluation fit together? | [Applied AI expertise](https://duytruyenthong.github.io/Alinguyen-portfolio/#ai-expertise) |
 | [Measure a commerce funnel without mixing attribution scopes](writing/commerce-funnel-measurement.md) | What can event data tell us about a funnel, and what can it not prove? | [Growth Commerce OS](https://growth-commerce-os.vercel.app/en) |
 
-## Selected work
-
-| Project | What you can inspect | Status |
-| --- | --- | --- |
-| [Ali Nguyen portfolio](https://github.com/DUYTRUYENTHONG/Alinguyen-portfolio) | Next.js/TypeScript source, project records, CVs, and GitHub Pages workflow | Public source and [live site](https://duytruyenthong.github.io/Alinguyen-portfolio/) |
-| [Vibecode Product Kit](https://github.com/DUYTRUYENTHONG/vibecode-product-kit) | JavaScript/Node.js CLI, templates, tests, and CI | Public developer tool |
-| [Growth Commerce OS](https://growth-commerce-os.vercel.app/en) | Service pages and customer-facing commerce workflows | Live website; impact not measured here |
-| [STOS](https://stosvn.vercel.app/stos) and [Chợ Kênh](https://growth-commerce-os.vercel.app/cho-kenh) | Sales-page product and marketplace catalog with manual inquiries | Live websites; private implementation |
-| [KKBox churn baseline](https://github.com/DUYTRUYENTHONG/kkbox-customer-churn-prediction) | Public Python source, snapshot-date case study, synthetic leakage test, and evaluation protocol | Public baseline; real-data scores pending authorized access |
-
 ## GitHub stats
 
-[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats-50c3f286e6e5.svg)](https://github.com/DUYTRUYENTHONG)
+[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats-a67286fffc03.svg)](https://github.com/DUYTRUYENTHONG)
 
 The card uses GitHub's contribution calendar and repository data. It counts public contributions; the owner's signed-in graph may also include private activity. It shows its last refresh date and is not a code-quality or impact score. [View the contribution activity on GitHub](https://github.com/DUYTRUYENTHONG?tab=overview).
 
