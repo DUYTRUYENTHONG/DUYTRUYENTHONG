@@ -81,7 +81,7 @@ I write about the decisions behind customer-facing AI and measurement systems. T
 
 ## GitHub stats
 
-[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats-1efb9e43dad1.svg)](https://github.com/DUYTRUYENTHONG)
+[![GitHub activity for DUYTRUYENTHONG: public contributions in the rolling year, public repositories, and pinned projects.](assets/github-stats-d6d3b105f340.svg)](https://github.com/DUYTRUYENTHONG)
 
 The card uses GitHub's contribution calendar and repository data. It counts public contributions; the owner's signed-in graph may also include private activity. It shows its last refresh date and is not a code-quality or impact score. [View the contribution activity on GitHub](https://github.com/DUYTRUYENTHONG?tab=overview).
 
