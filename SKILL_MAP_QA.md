@@ -25,3 +25,7 @@ Local preview: `http://127.0.0.1:3034/.preview.html#technical-skills`.
 Local screenshots and geometry: `.preview-qa/light-320.png`, `light-390.png`, `light-1280.png`, matching dark variants, `responsive.json`, and `anchors.json`. Preview artifacts are gitignored and are not published. Asset provenance and regeneration instructions are in `ASSET_NOTES.md`.
 
 Publication target authorized in the request: the existing profile repository's `main` branch, visible at `https://github.com/DUYTRUYENTHONG#technical-skills`. Live rendering is checked after push; local preview checks do not substitute for it.
+
+## Live verification after publication
+
+Implementation commit `d2a9cbd` was pushed to `main`. The live GitHub profile loaded the new wide source at 1280px and the narrow source at 390px and 320px. All images loaded, and document widths remained inside those viewports (1265, 375, 305px including scrollbar allowance). GitHub's five actual `user-content-...` permalink targets were present; keyboard activation of the Data grounding link reached its matching heading. GitHub prefixes generated DOM IDs while keeping normal Markdown fragment URLs, so checking an unprefixed DOM ID alone would give a false failure. Published screenshots are saved locally as `.preview-qa/live-1280.png`, `live-390.png`, and `live-320.png`; source/geometry evidence is in `live.json`.
