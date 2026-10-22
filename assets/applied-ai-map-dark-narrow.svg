@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="442" viewBox="0 0 400 442" role="img" aria-labelledby="title desc">
+<title id="title">Applied AI: five areas of work and study</title>
+<desc id="desc">Software and systems; GenAI integration; grounded data and RAG; agents and workflows; evaluation and LLMOps. Evidence and current focus are distinguished in the linked text below.</desc>
+<rect x="1" y="1" width="398" height="440" rx="16" fill="#0d1117" stroke="#30363d"/>
+<g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+<text x="24" y="44" fill="#f0f6fc" font-size="25" font-weight="650">Applied AI / engineering</text>
+<text x="24" y="74" fill="#b1bac4" font-size="16">Five areas. Evidence and focus below.</text>
+<line x1="24" y1="106" x2="376" y2="106" stroke="#30363d"/>
+<text x="24" y="132" fill="#79c0ff" font-size="16" font-weight="650">01</text>
+<text x="68" y="132" fill="#f0f6fc" font-size="21" font-weight="600">Software &amp; systems</text>
+<line x1="24" y1="166" x2="376" y2="166" stroke="#30363d"/>
+<text x="24" y="192" fill="#79c0ff" font-size="16" font-weight="650">02</text>
+<text x="68" y="192" fill="#f0f6fc" font-size="21" font-weight="600">GenAI integration</text>
+<line x1="24" y1="226" x2="376" y2="226" stroke="#30363d"/>
+<text x="24" y="252" fill="#79c0ff" font-size="16" font-weight="650">03</text>
+<text x="68" y="252" fill="#f0f6fc" font-size="21" font-weight="600">Grounded data / RAG</text>
+<line x1="24" y1="286" x2="376" y2="286" stroke="#30363d"/>
+<text x="24" y="312" fill="#79c0ff" font-size="16" font-weight="650">04</text>
+<text x="68" y="312" fill="#f0f6fc" font-size="21" font-weight="600">Agents &amp; workflows</text>
+<line x1="24" y1="346" x2="376" y2="346" stroke="#30363d"/>
+<text x="24" y="372" fill="#79c0ff" font-size="16" font-weight="650">05</text>
+<text x="68" y="372" fill="#f0f6fc" font-size="21" font-weight="600">Evaluation / LLMOps</text>
+</g>
+</svg>

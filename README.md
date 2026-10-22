@@ -17,7 +17,20 @@ I am **Nguyen Quang Duy (Ali Nguyen)**, a Computer Science graduate of Vietnames
 
 ## Technical skills
 
-[![Five applied AI skill areas illuminate in sequence: software and systems, GenAI integration, grounded data and RAG, agents and workflows, and evaluation and LLMOps.](assets/applied-ai-skill-map-v2.gif)](https://duytruyenthong.github.io/Alinguyen-portfolio/#ai-expertise)
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/applied-ai-map-dark-narrow.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/applied-ai-map-dark-wide.svg">
+  <source media="(max-width: 600px)" srcset="assets/applied-ai-map-light-narrow.svg">
+  <img src="assets/applied-ai-map-light-wide.svg" alt="Five applied AI areas; explore each area using the links below." width="840">
+</picture>
+
+**Explore the evidence and current focus:**
+
+- [01 · Software and systems](#01--software-and-systems)
+- [02 · GenAI integration](#02--genai-integration)
+- [03 · Data grounding and RAG](#03--data-grounding-and-rag)
+- [04 · Agents and workflows](#04--agents-and-workflows)
+- [05 · Evaluation and LLMOps](#05--evaluation-and-llmops)
 
 **Core stack and current focus:** Python · FastAPI · SQL · DuckDB · TypeScript · Docker · Google Analytics 4 · LangChain/LangGraph · scikit-learn · CI/CD
 
